@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package student;
+
+option go_package = "github.com/nishadag/grpc-student/proto";
+
+
+service StudentService {
+  rpc GetStudent (StudentRequest) returns (StudentResponse);
+}
+
+message StudentRequest {
+  int64 student_id = 1;
+}
+
+message StudentResponse {
+  int64 id = 1;
+  string name = 2;
+}
