@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package student;
+
+option go_package = "gRPC-AuthenticationAndServerStreaming/proto;proto";
+
+service StudentService {
+  rpc GetStudent(StudentRequest) returns (StudentResponse);
+  rpc ListStudents(Empty) returns (stream StudentResponse);
+}
+
+message StudentRequest {
+  int32 id = 1;
+}
+
+message StudentResponse {
+  int32 id = 1;
+  string name = 2;
+}
+
+message Empty {}
