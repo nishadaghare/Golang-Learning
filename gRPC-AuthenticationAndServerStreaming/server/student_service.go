@@ -4,7 +4,7 @@ package main
 import (
 	"context"
 
-	pb "grpc-student/proto"
+	pb "gRPC-AuthenticationAndServerStreaming/proto"
 )
 
 type StudentService struct {
@@ -28,9 +28,9 @@ func (s *StudentService) ListStudents(
 ) error {
 
 	students := []pb.StudentResponse{
-		{Id: 1, Name: "Amit"},
-		{Id: 2, Name: "Neha"},
-		{Id: 3, Name: "Ravi"},
+		{Id: 1, Name: "Nishada"},
+		{Id: 2, Name: "Vinay"},
+		{Id: 3, Name: "Varsha"},
 	}
 
 	for _, student := range students {
